@@ -1,6 +1,4 @@
 ---
-title: Welcome to Quartz
+title: Hello World
 ---
-
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+# Está es mi nueva wiki desde el móvil
