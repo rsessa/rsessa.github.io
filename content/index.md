@@ -1,25 +1,23 @@
 ---
-title: Hello World
-draft: false
+title: Bienvenido
+cssclasses: 
+  - landing
 ---
-# Está es mi nueva wiki desde el móvil
+# Hola, soy Richard 👋
 
-```mermaid
-graph TD
-    classDef app fill:none,stroke:#d1b3ff,stroke-width:3px;
-    classDef trans fill:none,stroke:#99ff99,stroke-width:3px;
-    classDef internet fill:none,stroke:#99d6ff,stroke-width:3px;
-    classDef access fill:none,stroke:#ffcc99,stroke-width:3px;
+Bienvenido a mi **Jardín Digital**. Aquí comparto lo que aprendo sobre tecnología, redes y desarrollo.
 
-    subgraph Pila_TCPIP
-        direction TB
-        L4("Capa 4: APLICACIÓN<br>(HTTP, DNS, SMTP...)"):::app
-        L3("Capa 3: TRANSPORTE<br>(TCP, UDP)"):::trans
-        L2("Capa 2: INTERNET<br>(IP, ICMP, ARP)"):::internet
-        L1("Capa 1: ACCESO A LA RED<br>(Ethernet, Wi-Fi, Drivers)"):::access
-        
-        L4 --> L3
-        L3 --> L2
-        L2 --> L1
-    end
-```
+---
+
+### 🗺️ Mapas de Contenido
+Si no sabes por dónde empezar, aquí tienes las rutas principales:
+
+- 📡 [[Redes y Protocolos]] - Todo sobre TCP/IP y comunicaciones.
+- 🐧 [[Linux y Servidores]] - Administración de sistemas.
+- 💻 [[Proyectos]] - Cosas que estoy construyendo.
+
+---
+
+> [!info] Nota
+> Este sitio está vivo. Las notas se actualizan constantemente.
+

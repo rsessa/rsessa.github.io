@@ -1,3 +1,29 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* ======================================================
+   ESTILOS ESPECÍFICOS PARA LA PORTADA (LANDING PAGE)
+   Se activa cuando pones "cssclasses: landing" en el frontmatter
+   ====================================================== */
+
+.landing {
+  /* 1. Ocultar el título H1 gigante y las migas de pan */
+  .article-title, 
+  .breadcrumb-container, 
+  .content-meta { 
+    display: none !important; 
+  }
+
+  /* 2. Opcional: Centrar el texto de bienvenida si usas un H1 manual en el cuerpo */
+  h1 {
+    text-align: center;
+    color: var(--secondary); /* Usa tu color azul Topaz */
+    margin-bottom: 1rem;
+  }
+
+  /* 3. Darle un toque especial a la introducción */
+  p {
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+}
