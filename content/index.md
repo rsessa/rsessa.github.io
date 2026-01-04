@@ -6,8 +6,6 @@ draft: false
 
 ```mermaid
 graph TD
-    %% Usamos fill:none (sin relleno) y stroke-width:3px (borde grueso)
-    %% Quitamos la definición de color de texto para que tu tema decida (blanco o negro)
     classDef app fill:none,stroke:#d1b3ff,stroke-width:3px;
     classDef trans fill:none,stroke:#99ff99,stroke-width:3px;
     classDef internet fill:none,stroke:#99d6ff,stroke-width:3px;
