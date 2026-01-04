@@ -14,37 +14,50 @@ export const sharedPageComponents: SharedLayout = {
 }
 
 // components for pages that display a single page (e.g. a single note)
-export const defaultContentPageLayout: PageLayout = {
+export const defaultPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
+    Component.Breadcrumbs(),        // "Migas de pan" para saber dónde estás (Inicio > Carpeta > Nota)
+    Component.ArticleTitle(),       // El título H1 gigante de la nota
+    Component.ContentMeta(),        // Tiempo de lectura y fecha (muy bloguero)
+    Component.TagList(),            // Las etiquetas de la nota
   ],
   left: [
-    Component.PageTitle(),
+    Component.PageTitle(),          // El nombre de tu sitio (arriba a la izquierda)
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
-    Component.Explorer(),
+    Component.Search(),             // La barra de búsqueda (esencial)
+    Component.Darkmode(),           // El interruptor sol/luna
+    Component.DesktopOnly(Component.Explorer()), // Árbol de carpetas (solo en PC)
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    Component.Graph({
+      localGraph: {
+        drag: true,                 // ¡Permite jugar con los nodos!
+        zoom: true,
+        depth: 1,                   // Profundidad 1 para ver solo conexiones directas (más limpio)
+        scale: 1.1,
+        repelForce: 0.5,
+        centerForce: 0.3,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 1,
+      },
+      globalGraph: {
+        drag: true,
+        zoom: true,
+        depth: -1,
+        scale: 0.9,
+        repelForce: 0.5,
+        centerForce: 0.3,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 1,
+      },
+    }),
+    Component.DesktopOnly(Component.TableOfContents()), // Índice de la nota actual (solo PC)
+    Component.Backlinks(),          // "¿Qué otras notas enlazan a esta?" (Mágia de Obsidian)
   ],
 }
+
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
@@ -52,16 +65,9 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-    Component.Explorer(),
+    Component.Search(),
+    Component.Darkmode(),
+    Component.DesktopOnly(Component.Explorer()),
   ],
-  right: [],
+  right: [], // Dejamos la derecha vacía en las listas para dar más aire
 }
