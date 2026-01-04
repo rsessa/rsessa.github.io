@@ -14,7 +14,7 @@ export const sharedPageComponents: SharedLayout = {
 }
 
 // components for pages that display a single page (e.g. a single note)
-export const defaultPageLayout: PageLayout = {
+export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(),        // "Migas de pan" para saber dónde estás (Inicio > Carpeta > Nota)
     Component.ArticleTitle(),       // El título H1 gigante de la nota
@@ -60,7 +60,7 @@ export const defaultPageLayout: PageLayout = {
 
 
 // components for pages that display lists of pages  (e.g. tags or folders)
-export const ListPageLayout: PageLayout = {
+export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
