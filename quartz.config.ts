@@ -23,34 +23,34 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Inter", 
+        body: "Inter",
+        code: "JetBrains Mono",
+
       },
-      colors: {
-        lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
-        },
-        darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
-        },
-      },
+colors: {
+  lightMode: {
+    light: "#f7f9fc",      // Fondo: Blanco muy suavemente azulado (no blanco clínico)
+    lightgray: "#e3e8ed",  // Bordes: Gris azulado claro
+    gray: "#8b9bb4",       // Meta: Gris intermedio frío
+    darkgray: "#3b4554",   // Texto: Gris oscuro con tinte azul (más suave que el negro puro)
+    dark: "#202832",       // Títulos: Casi negro, muy sólido
+    secondary: "#106ba3",  // ENLACES: El "Azul Topaz" clásico (profundo)
+    tertiary: "#2ba6ff",   // Hover: Un azul más brillante al pasar el mouse
+    highlight: "rgba(16, 107, 163, 0.15)", // Resaltado azul suave
+  },
+  darkMode: {
+    light: "#20242a",      // Fondo: Azul noche oscuro (típico de Topaz Dark)
+    lightgray: "#2e3440",  // Bordes: Gris oscuro
+    gray: "#6c7b91",       // Meta: Gris acero
+    darkgray: "#d8dee9",   // Texto: Blanco humo (muy legible)
+    dark: "#eceff4",       // Títulos: Blanco brillante
+    secondary: "#77aadd",  // ENLACES: Azul Topaz pastel/brillante
+    tertiary: "#88c0d0",   // Hover: Cyan/Turquesa
+    highlight: "rgba(119, 170, 221, 0.15)", // Resaltado
+  },
+},
+
     },
   },
   plugins: {
