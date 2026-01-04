@@ -6,10 +6,12 @@ draft: false
 
 ```mermaid
 graph TD
-    classDef app fill:#f9f2ff,stroke:#d1b3ff,stroke-width:2px,color:#333;
-    classDef trans fill:#e6ffe6,stroke:#99ff99,stroke-width:2px,color:#333;
-    classDef internet fill:#e6f7ff,stroke:#99d6ff,stroke-width:2px,color:#333;
-    classDef access fill:#fff4e6,stroke:#ffcc99,stroke-width:2px,color:#333;
+    %% Usamos fill:none (sin relleno) y stroke-width:3px (borde grueso)
+    %% Quitamos la definición de color de texto para que tu tema decida (blanco o negro)
+    classDef app fill:none,stroke:#d1b3ff,stroke-width:3px;
+    classDef trans fill:none,stroke:#99ff99,stroke-width:3px;
+    classDef internet fill:none,stroke:#99d6ff,stroke-width:3px;
+    classDef access fill:none,stroke:#ffcc99,stroke-width:3px;
 
     subgraph Pila_TCPIP
         direction TB
