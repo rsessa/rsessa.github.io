@@ -28,12 +28,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Darkmode(),           // El interruptor sol/luna
     Component.DesktopOnly(Component.Explorer()), // Árbol de carpetas (solo en PC)
   ],
-  right: [
-    Component.Graph({
+    right: [
+    // AQUI ESTA EL CAMBIO: Envolvemos el Graph en DesktopOnly
+    Component.DesktopOnly(Component.Graph({
       localGraph: {
-        drag: true,                 // ¡Permite jugar con los nodos!
+        drag: true,
         zoom: true,
-        depth: 1,                   // Profundidad 1 para ver solo conexiones directas (más limpio)
+        depth: 1,
         scale: 1.1,
         repelForce: 0.5,
         centerForce: 0.3,
@@ -52,10 +53,11 @@ export const defaultContentPageLayout: PageLayout = {
         fontSize: 0.6,
         opacityScale: 1,
       },
-    }),
-    Component.DesktopOnly(Component.TableOfContents()), // Índice de la nota actual (solo PC)
-    Component.Backlinks(),          // "¿Qué otras notas enlazan a esta?" (Mágia de Obsidian)
+    })),
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
   ],
+
 }
 
 
