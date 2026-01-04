@@ -2,4 +2,4 @@
 title: Hello World
 draft: false
 ---
-# Está es mi nueva wiki desde el móvil.
+# Está es mi nueva wiki desde el móvil
