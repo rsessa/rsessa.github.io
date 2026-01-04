@@ -58,7 +58,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
   afterBody: [
-    RecentCards(), 
+    Component.RecentCards(), 
   ],
 
 }
