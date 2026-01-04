@@ -26,7 +26,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),             // La barra de búsqueda (esencial)
     Component.Darkmode(),           // El interruptor sol/luna
-    Component.DesktopOnly(Component.Explorer()), // Árbol de carpetas (solo en PC)
+    Component.Explorer(), // Árbol de carpetas
   ],
     right: [
     // AQUI ESTA EL CAMBIO: Envolvemos el Graph en DesktopOnly
