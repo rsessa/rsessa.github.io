@@ -1,3 +1,13 @@
+---
+title: Modelos OSI y TCPIP
+draft: false
+tags:
+  - OSI_model
+  - TCPIP_model
+  - basics
+description: Este post contrasta el rigor teórico del modelo OSI con la eficiencia operativa del stack TCP/IP, analizando el proceso crítico de encapsulación. Visualizamos cómo la adición secuencial de cabeceras a través de las capas transforma los datos de aplicación en tramas físicas listas para viajar por la red.
+---
+
 ¡Hola mundo! Aquí Richard de nuevo 
 
 ¿Alguna vez te has preguntado cómo un simple "clic" cruza océanos de fibra óptica? Hoy nos ponemos el casco de ingeniero para hablar de los planos arquitectónicos de Internet: OSI y TCP/IP. 🤓
@@ -45,6 +55,7 @@ linkStyle 0,1,2,3 stroke-width:4px,fill:none,stroke:red;
 
 ## Anatomía de un Paquete 📦
 Para visualizar la encapsulación, miremos dentro de un paquete típico que viaja por tu red (por ejemplo, cuando visitas una web).
+
 El diagrama a continuación muestra cómo tus datos útiles (Payload) están envueltos secuencialmente por las cabeceras de Transporte (TCP), Red (IP) y finalmente Enlace (Ethernet) antes de salir al cable.
 
 ```mermaid
