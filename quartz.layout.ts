@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import RecentCards from "./quartz/components/RecentCards"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -56,6 +57,9 @@ export const defaultContentPageLayout: PageLayout = {
     })),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+  ],
+  afterBody: [
+    RecentCards(), 
   ],
 
 }

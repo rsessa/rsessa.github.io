@@ -1,23 +1,34 @@
 ---
-title: Bienvenido
+title: Home
 cssclasses: 
   - landing
 ---
-# Hola, soy Richard 👋
 
-Bienvenido a mi **Jardín Digital**. Aquí comparto lo que aprendo sobre tecnología, redes y desarrollo.
+# 🧠 Mi Cerebro Digital
 
----
+Bienvenido. Aquí documento mis aprendizajes sobre redes, código y sistemas.
 
-### 🗺️ Mapas de Contenido
-Si no sabes por dónde empezar, aquí tienes las rutas principales:
+### 🗺️ Mapa de Navegación
 
-- 📡 [[Redes y Protocolos]] - Todo sobre TCP/IP y comunicaciones.
-- 🐧 [[Linux y Servidores]] - Administración de sistemas.
-- 💻 [[Proyectos]] - Cosas que estoy construyendo.
+```mermaid
+graph TD
+    %% Estilo Universal "Contorno"
+    classDef estandar fill:none,stroke:#106ba3,stroke-width:3px;
+    
+    Center(Index):::estandar
+    
+    subgraph Core
+      Net(📡 Redes):::estandar
+      Sys(🐧 Linux):::estandar
+    end
+    
+    subgraph Extra
+      Dev(💻 Código):::estandar
+      Lab(🧪 Labs):::estandar
+    end
 
----
-
-> [!info] Nota
-> Este sitio está vivo. Las notas se actualizan constantemente.
-
+    Center --> Net
+    Center --> Sys
+    Center --> Dev
+    Center --> Lab
+```
