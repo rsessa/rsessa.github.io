@@ -19,7 +19,8 @@ graph TD
     
     subgraph Core
       Net(📡 Redes):::estandar
-      Sys(🐧 Linux):::estandar
+      Sys(🪟 Windows):::estandar
+      Win(🐧 Linux):::estandar
     end
     
     subgraph Extra
@@ -29,6 +30,7 @@ graph TD
 
     Center --> Net
     Center --> Sys
+    Center --> Win
     Center --> Dev
     Center --> Lab
 ```
